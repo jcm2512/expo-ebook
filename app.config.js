@@ -15,6 +15,10 @@ export default {
     },
     updates: {
       fallbackToCacheTimeout: 0,
+      url: "https://u.expo.dev/6253f808-c726-41ef-9ffb-10a4e35ce9ac",
+    },
+    runtimeVersion: {
+      policy: "sdkVersion",
     },
     assetBundlePatterns: ["**/*"],
     ios: {
@@ -37,6 +41,11 @@ export default {
       messagingSenderId: process.env.SENDER_ID,
       appId: process.env.APP_ID,
       measurementId: process.env.MEASUREMENT_ID,
+    },
+    extra: {
+      eas: {
+        projectId: "6253f808-c726-41ef-9ffb-10a4e35ce9ac",
+      },
     },
   },
 };
