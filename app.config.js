@@ -33,7 +33,7 @@ export default {
     web: {
       favicon: "./assets/favicon.png",
     },
-    firebase: {
+    extra: {
       apiKey: process.env.API_KEY,
       authDomain: process.env.AUTH_DOMAIN,
       projectId: process.env.PROJECT_ID,
@@ -41,8 +41,6 @@ export default {
       messagingSenderId: process.env.SENDER_ID,
       appId: process.env.APP_ID,
       measurementId: process.env.MEASUREMENT_ID,
-    },
-    extra: {
       eas: {
         projectId: "6253f808-c726-41ef-9ffb-10a4e35ce9ac",
       },
