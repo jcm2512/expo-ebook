@@ -73,13 +73,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#666',
     alignItems: 'center',
     justifyContent: 'center',
   },
 
   controls: {
-    flex: 1,
+    // flex: 1,
   },
 
   control: {
