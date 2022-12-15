@@ -5,6 +5,8 @@ import { Input, Button } from '@rneui/base';
 import { StackScreenProps } from '@react-navigation/stack';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
+import styles from '../styles/forms.js'
+
 const auth = getAuth();
 
 const SignUpScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
@@ -68,30 +70,5 @@ const SignUpScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 20,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  controls: {
-    flex: 1,
-  },
-
-  control: {
-    marginTop: 10
-  },
-
-  error: {
-    marginTop: 10,
-    padding: 10,
-    color: '#fff',
-    backgroundColor: '#D54826FF',
-  }
-});
 
 export default SignUpScreen;

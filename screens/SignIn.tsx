@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { Input, Button } from '@rneui/base';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
+import styles from '../styles/forms.js'
+
 const auth = getAuth();
 
 const SignInScreen = () => {
@@ -68,30 +70,5 @@ const SignInScreen = () => {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 20,
-    backgroundColor: '#666',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  controls: {
-    // flex: 1,
-  },
-
-  control: {
-    marginTop: 10
-  },
-
-  error: {
-    marginTop: 10,
-    padding: 10,
-    color: '#fff',
-    backgroundColor: '#D54826FF',
-  }
-});
 
 export default SignInScreen;

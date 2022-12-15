@@ -12,6 +12,9 @@ const WelcomeScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
         <Button title="Sign in" buttonStyle={styles.button} onPress={() => navigation.navigate('Sign In')} />
         <Button title="Sign up" type="outline" buttonStyle={styles.button} onPress={() => navigation.navigate('Sign Up')} />
       </View>
+      <View style={styles.footer}>
+        <Text>Logo</Text>
+      </View>
     </View>
   );
 }
@@ -31,6 +34,10 @@ const styles = StyleSheet.create({
 
   button: {
     marginTop: 10
+  },
+
+  footer: {
+    height: 100
   }
 });
 
