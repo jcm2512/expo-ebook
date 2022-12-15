@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { useAuthentication } from '../utils/hooks/useAuthentication';
-import { Button } from 'react-native-elements';
+import { Button } from '@rneui/base';
 import { getAuth, signOut } from "firebase/auth";
 
 const auth = getAuth();
