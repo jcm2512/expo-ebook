@@ -11,7 +11,7 @@ const WelcomeScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
       <Text style={styles.title}>
         Hi!
         <br />
-        Welcome to the English World App
+        Welcome to the English World App!
       </Text>
 
       <View style={layout.controls}>
