@@ -8,12 +8,7 @@ import layout from "../styles/layout.js";
 const WelcomeScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
   return (
     <View style={layout.container}>
-      <Text style={styles.title}>
-        {`
-        Hi!
-        Welcome to the English World App
-      `}
-      </Text>
+      <Text style={styles.title}>{`Welcome to the English World App`}</Text>
 
       <View style={layout.controls}>
         <Button
