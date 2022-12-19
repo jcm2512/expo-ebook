@@ -1,46 +1,58 @@
-import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import { StackScreenProps } from '@react-navigation/stack';
-import { Button } from '@rneui/base';
+import React from "react";
+import { StyleSheet, Text, View, Image } from "react-native";
+import { StackScreenProps } from "@react-navigation/stack";
+import { Button } from "@rneui/base";
+
+import layout from "../styles/layout.js";
 
 const WelcomeScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text>Welcome screen!</Text>
+    <View style={layout.container}>
+      <Text style={styles.title}>
+        Hi!
+        <br />
+        Welcome to the English World App
+      </Text>
 
-      <View style={styles.buttons}>
-        <Button title="Sign in" buttonStyle={styles.button} onPress={() => navigation.navigate('Sign In')} />
-        <Button title="Sign up" type="outline" buttonStyle={styles.button} onPress={() => navigation.navigate('Sign Up')} />
+      <View style={layout.controls}>
+        <Button
+          title="Sign in"
+          size="lg"
+          buttonStyle={layout.control}
+          onPress={() => navigation.navigate("Sign In")}
+        />
+        <Button
+          title="Sign up"
+          type="outline"
+          size="lg"
+          buttonStyle={layout.control}
+          onPress={() => navigation.navigate("Sign Up")}
+        />
       </View>
       <View style={styles.footer}>
-        <Image         source={require('../assets/logo_on.png')}
-/>
+        <Image
+          style={styles.imageLogo}
+          source={require("../assets/logo_on.png")}
+        />
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 20,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  buttons: {
-    flex: 1,
-  },
-
-  button: {
-    marginTop: 10
+  title: {
+    height: 50,
   },
 
   footer: {
-    height: 100,
-    marginBottom: 50,
-  }
+    flex: 1,
+    width: "100%",
+  },
+
+  imageLogo: {
+    flex: 1,
+    resizeMode: "contain",
+  },
 });
 
 export default WelcomeScreen;
