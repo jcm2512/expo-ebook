@@ -3,32 +3,34 @@ import { StyleSheet, Text, View, Image } from "react-native";
 import { StackScreenProps } from "@react-navigation/stack";
 import { Button } from "@rneui/base";
 
+import { LinearGradient } from "expo-linear-gradient";
+
 import layout from "../styles/layout.js";
 
+import { backgroundColors } from "../styles/globals.js";
 const WelcomeScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
   return (
     <View style={layout.container}>
-      <Text style={styles.title}>{`Welcome to the English World App`}</Text>
-
-      <View style={layout.controls}>
-        <Button
-          title="Sign in"
-          size="lg"
-          buttonStyle={layout.control}
-          onPress={() => navigation.navigate("Sign In")}
-        />
-        <Button
-          title="Sign up"
-          type="outline"
-          size="lg"
-          buttonStyle={layout.control}
-          onPress={() => navigation.navigate("Sign Up")}
-        />
+      <LinearGradient colors={backgroundColors} style={layout.background} />
+      <View style={styles.header}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>{`English World`}</Text>
+          <Text style={styles.title}>{`ONLINE`}</Text>
+        </View>
       </View>
       <View style={styles.footer}>
-        <Image
-          style={styles.imageLogo}
-          source={require("../assets/logo_on.png")}
+        <Button
+          title="Get Started"
+          onPress={() => navigation.navigate("Sign In")}
+          buttonStyle={{
+            backgroundColor: "#3F444B",
+            borderRadius: 30,
+          }}
+          containerStyle={{
+            marginHorizontal: 60,
+            marginVertical: 10,
+          }}
+          titleStyle={{ fontWeight: "bold" }}
         />
       </View>
     </View>
@@ -36,9 +38,11 @@ const WelcomeScreen: React.FC<StackScreenProps<any>> = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  title: {
-    height: 50,
+  header: {
+    flex: 3,
   },
+  title: { alignSelf: "center", fontFamily: "Lexend-Bold", fontSize: 40 },
+  titleContainer: { marginTop: 150 },
 
   footer: {
     flex: 1,
