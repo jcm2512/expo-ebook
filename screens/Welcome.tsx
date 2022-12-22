@@ -43,12 +43,13 @@ const styles = StyleSheet.create({
   footer: {
     flex: 1,
     width: "100%",
+    alignContent: "center",
   },
 
   imageLogo: {
     flex: 1,
     resizeMode: "contain",
-    alignSelf: "center",
+    // alignSelf: "center",
   },
 });
 
